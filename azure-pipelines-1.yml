@@ -10,6 +10,13 @@ stages:
      dependsOn: Stage1
      jobs:
        - job: JobA
+         timeoutInMinutes: 1
+         continueOnError: true
+         cancelTimeoutInMinutes: 2
+         displayName: "This ia a single job Demo"
+         condition: failed()
+         steps:
+           - bash: echo "A"
 
    - stage: Stage2
      dependsOn: []
