@@ -1,0 +1,13 @@
+pool:
+ vmImage: window-latest
+
+stages: 
+   - stage: Stage1
+     jobs:
+      - job: Job1
+
+   - stage: Stage2
+     dependsOn: []
+     jobs:
+      - job: Job2
+       
